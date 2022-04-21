@@ -9,6 +9,8 @@ public class HotelReservationSystem {
 		hotel.addHotel();
 		System.out.println("<-------------------------- Enter Dates -------------------------->");
 		hotel.enterDates();
+		System.out.println("<-------------------------- Show Cheapest Hotels -------------------------->");
+		hotel.findCheapestHotel("2020-09-11", "2020-09-12");
 
 	}
 
