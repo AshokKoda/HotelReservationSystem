@@ -13,11 +13,11 @@ public class HotelReservationTest {
 	}
 
 	@Test
-	public void givenDateRangeShouldReturnTheCheapestHotelRate() {
-		HotelReservation obj = new HotelReservation();
-		obj.addHotel();
-		Assert.assertEquals(220, obj.findCheapestHotel("2020-09-10", "2020-09-11"));
-	}
+    public void givenDateRangeShouldReturnTheCheapestHotelRate() {
+        HotelReservation obj = new HotelReservation();
+        obj.addHotel();
+        Assert.assertEquals(200, obj.findCheapestHotel("2020-09-11", "2020-09-12"));
+    }
 
 	@Test
 	public void givenWeekDayWeekEndRatesShouldReturnThoseRates() {
@@ -27,4 +27,6 @@ public class HotelReservationTest {
 		Assert.assertEquals(50, hotel.hotelReservationList.get("Bridgewood").getWeekendRate());
 		Assert.assertEquals(150, hotel.hotelReservationList.get("Ridgewood").getWeekendRate());
 	}
+	
+	
 }
