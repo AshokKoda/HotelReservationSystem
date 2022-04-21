@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class HotelReservation {
@@ -179,5 +181,20 @@ public class HotelReservation {
 				return hotelObjList.get(0).getSpecialWeekdayRate() + hotelObjList.get(0).getSpecialWeekendRate();
 			}
 		}
+	}
+
+	/**
+	 * Method for validating date format using regex
+	 *
+	 * @param d1 takes in the date 1 String
+	 * @param d2 takes in the date 2 String
+	 * @return returns true if entered dates are valid
+	 */
+	public boolean isDateValid(String d1, String d2) {
+		String regex = "^[0-9]{4}-[0-9]{2}-[0-9]{2}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher1 = pattern.matcher(d1);
+		Matcher matcher2 = pattern.matcher(d2);
+		return matcher1.matches() && matcher2.matches();
 	}
 }
