@@ -13,6 +13,8 @@ public class HotelReservationSystem {
 		hotel.findCheapestHotel("2020-09-11", "2020-09-12");
 		System.out.println("<-------------------------- Show Best Hotels -------------------------->");
 		hotel.findBestRatedHotel("2020-09-11", "2020-09-12");
+		System.out.println("<-------------------------- Cheapest Hotel for Reward Customers -------------------------->");
+		hotel.findCheapestHotelForRewardCustomer("2020-09-11", "2020-09-12");
 
 	}
 
