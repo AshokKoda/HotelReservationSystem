@@ -39,33 +39,40 @@ public class HotelReservationTest {
 
 	@Test
 	public void givenDateRangeShouldReturnTheCheapestHotelRate1() {
-		HotelReservation obj = new HotelReservation();
-		obj.addHotel();
-		Assert.assertEquals(200, obj.findCheapestHotel("2020-09-11", "2020-09-12"));
+		HotelReservation hotel = new HotelReservation();
+		hotel.addHotel();
+		Assert.assertEquals(200, hotel.findCheapestHotel("2020-09-11", "2020-09-12"));
 	}
 
 	@Test
 	public void givenDateRangeShouldReturnTheCheapestHotelRate2() {
-		HotelReservation obj = new HotelReservation();
-		obj.addHotel();
-		Assert.assertEquals(370, obj.findBestRatedHotel("2020-09-11", "2020-09-12"));
+		HotelReservation hotel = new HotelReservation();
+		hotel.addHotel();
+		Assert.assertEquals(370, hotel.findBestRatedHotel("2020-09-11", "2020-09-12"));
 	}
 
 	@Test
 	public void addSpecialRatesTest() {
-		HotelReservation obj = new HotelReservation();
-		obj.addHotel();
-		Assert.assertEquals(80, obj.hotelReservationList.get("Lakewood").getSpecialWeekdayRate());
-		Assert.assertEquals(110, obj.hotelReservationList.get("Bridgewood").getSpecialWeekdayRate());
-		Assert.assertEquals(100, obj.hotelReservationList.get("Ridgewood").getSpecialWeekdayRate());
+		HotelReservation hotel = new HotelReservation();
+		hotel.addHotel();
+		Assert.assertEquals(80, hotel.hotelReservationList.get("Lakewood").getSpecialWeekdayRate());
+		Assert.assertEquals(110, hotel.hotelReservationList.get("Bridgewood").getSpecialWeekdayRate());
+		Assert.assertEquals(100, hotel.hotelReservationList.get("Ridgewood").getSpecialWeekdayRate());
 	}
 
 	@Test
 	public void givenDateRangeShouldReturnTheCheapestBestRatedHotelforRewardCustomer() {
-		HotelReservation obj = new HotelReservation();
-		obj.addHotel();
-		Assert.assertEquals(140, obj.findCheapestHotelForRewardCustomer("2020-09-11", "2020-09-12"));
+		HotelReservation hotel = new HotelReservation();
+		hotel.addHotel();
+		Assert.assertEquals(140, hotel.findCheapestHotelForRewardCustomer("2020-09-11", "2020-09-12"));
 	}
+	
+	@Test
+    public void givenDateRangeShouldReturnTheCheapestBestRatedHotelforRewardCustomer1() {
+        HotelReservation hotel = new HotelReservation();
+        hotel.addHotel();
+        Assert.assertEquals(200, hotel.findCheapestHotel("2020-09-11", "2020-09-12"));
+    }
 	
 	@Test
     public void givenDateShouldReturnTrueIfDateIsValid() {
