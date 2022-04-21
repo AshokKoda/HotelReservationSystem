@@ -7,6 +7,8 @@ public class HotelReservationSystem {
 		HotelReservation hotel = new HotelReservation();
 		System.out.println("<-------------------------- Hotels -------------------------->");
 		hotel.addHotel();
+		System.out.println("<-------------------------- Enter Dates -------------------------->");
+		hotel.enterDates();
 
 	}
 
